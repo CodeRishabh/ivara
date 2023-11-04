@@ -1,0 +1,42 @@
+@import "../../css-config/mixins.scss";
+
+.hero-bannerrr {
+  position: relative;
+  width: 100vw;
+  height: 30vh;
+  @include md {
+    height: 60vh;
+  }
+  img {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.main-content {
+  max-width: calc(100% - 20px);
+  margin: 40px auto;
+  @include md {
+    margin: 80px auto;
+    max-width: 1200px;
+  }
+  .headline {
+    width: 100%;
+    font-size: 24px;
+    font-weight: 400;
+    font-family: 'Cedarville Cursive', cursive;
+    margin: 20px 0;
+    line-height: 30px;
+    @include md{
+        margin: 40px 0;
+        padding-bottom: 40px;
+        font-size: 52px;
+    }
+  }
+  .text-content{
+    p{
+        font-size: 16px;
+        line-height: 24px;
+    }
+  }
+}

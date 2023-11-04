@@ -1,0 +1,113 @@
+@import "../../../css-config/mixins.scss";
+.hero-banner {
+  padding: 40px 0;
+  position: relative;
+  background-image: linear-gradient(
+      to top,
+      rgba(35, 31, 32, 0.8),
+      rgba(77, 53, 53, 0.8),
+      rgba(119, 79, 65, 0.8),
+      rgba(152, 112, 71, 0.8),
+      rgba(173, 151, 79, 0.8)
+    ),
+    linear-gradient(to top, #231f20, #4d3535, #774f41, #987047, #ad974f);
+  background-blend-mode: overlay;
+  @include md {
+    height: calc(100vh - 80px);
+  }
+  .content {
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column-reverse;
+    max-width: calc(100% - 20px);
+    margin: 0 auto;
+    position: relative;
+    @include md {
+      flex-direction: row;
+      max-width: 1200px;
+    }
+    .banner-img {
+      position: relative;
+      z-index: 9;
+      width: 200px;
+      margin-bottom: 20px;
+      @include md {
+        width: 500px;
+        margin-right: 60px;
+        margin-bottom: 0;
+      }
+    }
+    .text-content {
+      color: white;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      @include md {
+        position: absolute;
+        left: 50px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      @include xxl {
+        left: 0;
+      }
+      .hero-text {
+        font-size: 40px;
+        line-height: 1;
+        color: black;
+        margin-bottom: 20px;
+        width: 100%;
+        display: flex;
+        gap: 15px;
+        font-style: italic;
+        .static {
+          font-style: normal;
+          color: #eaeaea;
+        }
+        @include md {
+          font-size: 60px;
+        }
+      }
+      p {
+        max-width: 300px;
+        font-size: 14px;
+        line-height: 20px;
+        margin-bottom: 20px;
+        @include md {
+          max-width: 500px;
+          font-size: 18px;
+          line-height: 24px;
+          margin-bottom: 40px;
+        }
+      }
+      .ctas {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        .banner-cta {
+          text-transform: uppercase;
+          font-size: 13px;
+          font-weight: 700;
+          width: fit-content;
+          border: 2px solid white;
+          padding: 10px 20px;
+          transition: all ease 0.3s;
+          cursor: pointer;
+          background-color: white;
+          a{
+            letter-spacing: 1px;
+            color: black;
+            text-decoration: none;
+          }
+          &:hover {
+            scale: 1.1;
+            opacity: 0.9;
+          }
+        }
+      }
+    }
+  }
+}
